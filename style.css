@@ -313,7 +313,7 @@ Toggler1 & Toggler2 are in a row container (bootstrap).
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgba(38,62,125, 0.9);
+    background-color: rgba(38,62,125,1);
     border:1px green solid;
 }
 
