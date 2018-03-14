@@ -9,30 +9,30 @@
 nav {
 	position: relative;
 }
-	
+
 body, html {
 		height: 100%;
 }
 
 /* Images de fond (bg = Background) */
-#home { 
+#home {
 		/* The image used */
 		background-image: url("images/home.jpg");
-	
+
 		/* Full height */
-		height: 100%; 
-	
+		height: 100%;
+
 		/* Center and scale the image nicely */
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-	}        
+	}
 
 #eat {
 	background-image: url("images/eat.jpg");
 
-	height: 100%; 
-	
+	height: 100%;
+
 		/* Center and scale the image nicely */
 		background-position: center;
 		background-repeat: no-repeat;
@@ -42,8 +42,8 @@ body, html {
 #sport {
 	background-image: url("images/sport.jpg");
 
-	height: 100%; 
-	
+	height: 100%;
+
 		/* Center and scale the image nicely */
 		background-position: center;
 		background-repeat: no-repeat;
@@ -53,8 +53,8 @@ body, html {
 #drink {
 	background-image: url("images/drink.jpg");
 
-	height: 100%; 
-	
+	height: 100%;
+
 		/* Center and scale the image nicely */
 		background-position: center;
 		background-repeat: no-repeat;
@@ -64,8 +64,8 @@ body, html {
 #event {
 	background-image: url("images/events.jpg");
 
-	height: 100%; 
-	
+	height: 100%;
+
 		/* Center and scale the image nicely */
 		background-position: center;
 		background-repeat: no-repeat;
@@ -79,7 +79,7 @@ body, html {
 
 #countdown h1 {
 	color: #263e7d;
-	text-align: center; 
+	text-align: center;
 	padding-top:10vh;
 }
 #countdown .clock {
@@ -151,7 +151,7 @@ body {
 }
 .nav-pills li {
     margin-left: 5px; //use whatever you want
-} 
+}
 /* .modal-header a {
 	border: slateblue 3px solid;
 } */
@@ -196,16 +196,16 @@ body {
     color: #263e7d;
 
     font-size: 10vh;
-    
+
 }
 .infoPage {
     text-align: center;
     color: #263e7d;
-    
+
 }
 .cadrePage{
     margin-left:auto;
-margin-right:auto; 
+margin-right:auto;
     border: #263e7d solid 10px;
 }
 /* Couleurs et attributs des polices */
@@ -281,7 +281,7 @@ section {
 
 /* Position of the togglers in their own containers (menuToggler)*/
 /* Toggler1 is Main Menu Icon. Toggler2 is Phone Icon
-Toggler1 & Toggler2 are in a row container (bootstrap). 
+Toggler1 & Toggler2 are in a row container (bootstrap).
 #1 is flex-start (left of the screen) in its col-6
 #2 is flex-end (right of the screen) in its col-6 */
 
@@ -322,13 +322,13 @@ Toggler1 & Toggler2 are in a row container (bootstrap).
 .overlay-content {
     padding-top: 15vh; /* starts at 15vh from the top */
     width: 100vw;       /* each container containing the text is full width */
-    text-align: center; 
+    text-align: center;
 }
 
 /* Now we set the text itself (eat, sport, ...) */
 
 .overlay a {
-    padding: 2vh; 
+    padding: 2vh;
     text-decoration: none;
     font-size: 5vh;
     color: #fbebd5;
@@ -431,4 +431,118 @@ Toggler1 & Toggler2 are in a row container (bootstrap).
 
 .phoneIcon {
     cursor:pointer;
+}
+
+/* ----------- FOOTER ----------- */
+
+.page-footer {
+	background: #263e7d;
+	color: #fbebd5;
+}
+
+
+.sectionfooter {
+	background:#fbebd5;
+}
+
+
+
+/* ----------- FORMULAIRE ---------*/
+
+
+/* Global form contenair  */
+
+.quickform {
+	background:#fbebd5;
+	padding:30px 30px;
+	margin: 10px auto 0px auto;
+	width: 900;
+	text-align: left;
+
+}
+
+
+/* Formulaire background color */
+
+.sectionform {
+	background:#fbebd5;
+}
+
+
+/* Part of "send us a message" */
+
+.quickform h4 {
+	text-transform:uppercase;
+	color:#263e7d;
+	margin:15px 0px;
+}
+
+
+/* Color for name, email, phone and message */
+
+.infoform::placeholder {
+  color: #263e7d;
+}
+
+/* Contenair for name, email and phone (ONLY)) */
+.quickform input {
+	width:100%;
+	height:auto;
+	float:left;
+	border:3.5px solid #263e7d;
+	padding:12px 5px;
+	background:none;
+	margin:0px 0px 20px 0px;
+
+}
+
+/* Contenair for "Your message" */
+.quickform textarea {
+	width:100%;
+	height:auto;
+	min-height:230px;
+	float:left;
+	border:3.5px solid #263e7d;
+	padding:8px 5px;
+	background:none;
+	margin:0px 0px 20px 0px;
+	resize:none;
+}
+
+/* Button Submit */
+.quickform button {
+	background:#fbebd5;
+	color:#333;
+	padding:8px 10px;
+	border:3.5px solid #263e7d;
+	background:none;
+	font-size:12px 5px;
+	text-transform:uppercase;
+	color:#263e7d;
+}
+
+
+/* Button Submit when you touch it. */
+
+.quickform button:hover {
+	background:#263e7d;
+	color:#fbebd5;
+}
+
+
+/* When you click on form part */
+
+.quickform input[type="text"]:focus {
+	border:3.5px dotted #263e7d;
+  outline: 0;
+}
+
+.quickform textarea[type="text"]:focus {
+  border:3.5px dotted #263e7d;
+  outline: 0
+}
+
+.quickform textarea:focus {
+  border:3.5px dotted #263e7d;
+  outline: 0;
 }
