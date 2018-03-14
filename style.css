@@ -74,7 +74,8 @@ body, html {
 
 #countdown {
 	background-color:#fbebd5;
-	height: 100%;
+    height: 100%;
+
 }
 
 #countdown h1 {
@@ -83,9 +84,14 @@ body, html {
 	padding-top:10vh;
 }
 #countdown .clock {
-	width: 70%;
-	height: auto;
-	padding-top: 10vh;
+    height: 100%;
+    width: auto;
+    padding-top: 10vh;
+    color: #263e7d;
+}
+#aboutUs {
+    background-color: #263e7d;
+    text-align: center;
 }
 .btn {
 
