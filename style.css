@@ -15,7 +15,7 @@ body, html {
 }
 
 /* Images de fond (bg = Background) */
-.bgHome { 
+#home { 
 		/* The image used */
 		background-image: url("images/home.jpg");
 	
@@ -28,7 +28,7 @@ body, html {
 		background-size: cover;
 	}        
 
-.bgEat {
+#eat {
 	background-image: url("images/eat.jpg");
 
 	height: 100%; 
@@ -39,7 +39,7 @@ body, html {
 		background-size: cover;
 }
 
-.bgSport {
+#sport {
 	background-image: url("images/sport.jpg");
 
 	height: 100%; 
@@ -50,7 +50,7 @@ body, html {
 		background-size: cover;
 }
 
-.bgDrink {
+#drink {
 	background-image: url("images/drink.jpg");
 
 	height: 100%; 
@@ -61,7 +61,7 @@ body, html {
 		background-size: cover;
 }
 
-.bgEvent {
+#event {
 	background-image: url("images/events.jpg");
 
 	height: 100%; 
@@ -72,17 +72,17 @@ body, html {
 		background-size: cover;
 }
 
-.countdown {
+#countdown {
 	background-color:#fbebd5;
 	height: 100%;
 }
 
-.countdown h1 {
+#countdown h1 {
 	color: #263e7d;
 	text-align: center; 
 	padding-top:10vh;
 }
-.countdown .clock {
+#countdown .clock {
 	width: 70%;
 	height: auto;
 	padding-top: 10vh;
@@ -174,11 +174,9 @@ body {
   overflow: auto;
   background: #263e7d;
 }
-.modal-body  {
-    border: #fbebd5 solid 3.5px;
+.modal-body p {
+    border: cornsilk solid 5px;
     text-align: center;
-    border-radius: 5px;
-    font-family: 'menu';
 }
 .modal-body h2{
     text-align: center;
@@ -199,10 +197,6 @@ body {
 
     font-size: 10vh;
     
-}
-
-.maco {
-    background-color:#fbebd5;
 }
 .infoPage {
     text-align: center;
@@ -227,12 +221,11 @@ h3 {
   }
 }
 
-h3 {
+p {
   font-size: 1.4em;
   line-height: 1.5;
   color: #fbebd5;
-  font-family: 'menu';
-  text-align: center;
+
   // last
   &:last-child {
     margin-bottom: 0;
