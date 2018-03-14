@@ -405,7 +405,29 @@ margin-right:auto;
   background: transparent;
 }
 
-        /* CONTACT US */
+        /* ABOUT US */
+
+
+
+        /* Section background */
+        #aboutUs
+        {
+          background:#263e7d;
+          height:auto;
+          width: 100vw;
+        }
+
+
+        /* Contenair in about us section  */
+
+        .aboutUsTavern
+        {
+          border: 3.5px solid #fbebd5;
+          background:#263e7d;
+          color:#fbebd5;
+
+
+        }
 
         /* FORMULAIRES */
 

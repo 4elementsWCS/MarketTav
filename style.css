@@ -322,6 +322,11 @@ nav {
   background: #fbebd5;
   border: 0;
   text-align: center;
+<<<<<<< HEAD
+=======
+  width: 100vw;
+
+>>>>>>> fc222f4aec7e94c3a783268a10aa793f074ad99d
 }
 .nav-pills li {
     margin-left: 5px; //use whatever you want
@@ -334,6 +339,10 @@ nav {
   font-size: 2em;
   color: #fff;
   line-height: 30px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> fc222f4aec7e94c3a783268a10aa793f074ad99d
 }
 .logo {
     height:30vh;
@@ -535,6 +544,7 @@ margin-right:auto;
   outline: 0;
 }
 
+<<<<<<< HEAD
         /* FOOTER */
 
 footer {
@@ -582,3 +592,29 @@ footer h5{
     padding-top: 2vh;
   }
 }
+=======
+
+
+/* ----------- ABOUT US ---------*/
+
+
+/* Section background */
+#aboutUs
+{
+  background:#263e7d;
+  height:auto;
+  width: 100vw;
+}
+
+
+/* Contenair in about us section  */
+
+.aboutUsTavern
+{
+  border: 3.5px solid #fbebd5;
+  background:#263e7d;
+  color:#fbebd5;
+
+
+}
+>>>>>>> fc222f4aec7e94c3a783268a10aa793f074ad99d
