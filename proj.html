@@ -7,10 +7,12 @@
     <title>The Market Tavern</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="styledev.css" />
 </head>
 
 <body>
+
+
 
     <!-- Navbar **************************** -->
     <nav class="fixed-top">
@@ -33,7 +35,7 @@
 
                     <div id="myNav" class="overlay">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-                            <img class="img-fluid mx-auto d-block croixNav t-25" src="icon/croix.svg" </a>
+                            <img class="img-fluid mx-auto d-block croixNav t-25" src="icon/croix.svg"/> </a>
                             <div class="overlay-content">
                                 <a href="#eat" onclick="closeNav()">EAT</a>
                                 <a href="#sport" onclick="closeNav()">SPORT</a>
@@ -84,6 +86,14 @@
         <img class="img-fluid mx-auto d-block logo " src="icon/logo.png">
     </section>
 
+
+
+
+<div class="eatSport">
+
+
+
+
     <!-- EAT ******************************* -->
 
     <section id="eat">
@@ -111,7 +121,7 @@
 
                         <ul class="nav nav-pills">
                             <li role="presentation">
-                                <a href="#starters">STARTERS</a>
+                                <a href="#starters">BEFORE</a>
                             </li>
                             <li role="presentation">
                                 <a href="#mains">MAINS&BRUNCH</a>
@@ -338,7 +348,7 @@
 
                     <!-- footer -->
                     <div class="modal-footer">
-                        <button class="btn " data-dismiss="modal">
+                        <button class="btn btn-secondary" data-dismiss="modal">
                             <img class="img-fluid mx-auto d-block" src="icon/croixBleue.svg" style="width: 10%; height: auto;">
                         </button>
                     </div>
@@ -346,8 +356,68 @@
 
     </section>
 
+</div>
 
-    <!-- DRINK ********************************* -->
+<!-- **************************************** -->
+
+<div class="drinkEvent">
+
+
+   
+
+    <!-- EVENT *************************** -->
+
+    <section id="event">
+        <div class="container-fluid">
+            <div class="row">
+                <button class="col-6 offset-3 btn btn-modal" data-toggle="modal" data-target="#eventModal">
+                    <img class="img-fluid mx-auto d-block burger t-25" src="icon/eventsBlue.svg">
+                </button>
+            </div>
+        </div>
+
+        <div id="eventModal" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+            <!-- dialog -->
+            <div class="modal-dialog">
+
+                <!-- content -->
+                <div class="modal-content">
+
+                    <!-- header -->
+                    <div class="modal-header">
+                        <h1 id="myModalLabel" class="modal-title">BURGERS</h1>
+                    </div>
+                    <!-- header -->
+
+                    <!-- body -->
+                    <div class="modal-body">
+                        <h2>MONDAY</h2>
+                        <h3>Monday Club Like our Facebook page Get Happy Hours all night!</h3>
+                        <h2>TUESDAY</h2>
+                        <h3>Live sport all day On our HD screens</h3>
+                        <h2>WEDNESDAY</h2>
+                        <h3>Happy Hours On many beers and spirits</h3>
+                        <h2>THURSDAY</h2>
+                        <h3>Happy Burgers! Burgers for 8€ from 19h to 21h</h3>
+                        <h2>FRIDAY</h2>
+                        <h3>Friday Nigth Cocktails Come and try out best cocktails from 6€</h3>
+                        <h2>SATURDAY</h2>
+                        <h3>Ladies night Wine & Tapas boards for 20€</h3>
+                        <h2>SUNDAY</h2>
+                        <h3>The Market Pub Quizz at 20h30 with quizz master Andrew</h3>
+
+                    </div>
+                    <!-- body -->
+
+                    <!-- footer -->
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal">
+                            <img class="img-fluid mx-auto d-block" src="icon/croixBleue.svg" style="width: 10%; height: auto;">
+                        </button>
+    </section>
+
+     <!-- DRINK ********************************* -->
 
     <section id="drink">
         <div class="container-fluid">
@@ -368,23 +438,13 @@
 
                     <!-- header -->
                     <div class="modal-header">
-                        <ul class="nav nav-pills">
-                            <li role="presentation">
-                                <a href="#cocktails">COCKTAIL</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#beers">BEERS</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#spirits">SPIRIT</a>
-                            </li>
-                        </ul>
+                        <h1 id="myModalLabel" class="modal-title">DRINKS</h1>
                     </div>
                     <!-- header -->
 
                     <!-- body -->
                     <div class="modal-body">
-                        <h2 id="cocktails">COCKTAILS</h2>
+                        <h2 id="cocktails">COKTAILS</h2>
 
                         <h3>ENGLISH PUNCH 6.50</h3>
                         <h3> MOJITO 8.00</h3>
@@ -392,14 +452,6 @@
                         <h3> SEX ON THE BEACH 8.00</h3>
                         <h3> CUBA LIBRE 8.00</h3>
                         <h3> DARK & STORMY 8.00</h3>
-
-                        <h2 id="beers">BEERS</h2>
-                        <h3>DUVEL 4€</h3>
-                        <h3>DUVEL TRIPEL HOP 5€</h3>
-                        <h3>BROOKLYN 5€</h3>
-                        <h3>CHOUFFE 6€</h3>
-                        <h3>CHIMAY 7€</h3>
-
 
                         <h2 id="spirits">SPIRITS</h2>
                         <h2>RUM</h2>
@@ -437,151 +489,96 @@
                         <h3>MAKER‘S MARK 7.50</h3>
                         <h3> TALISKER 7.50</h3>
 
+                        <h2 id="beer">BEERS</h2>
+                        <h3>DUVEL 4€</h3>
+                        <h3>DUVEL TRIPEL HOP 5€</h3>
+                        <h3>BROOKLYN 5€</h3>
+                        <h3>CHOUFFE 6€</h3>
+                        <h3>CHIMAY 7€</h3>
 
                     </div>
                     <!-- body -->
 
                     <!-- footer -->
                     <div class="modal-footer">
-                        <button class="btn" data-dismiss="modal">
+                        <button class="btn btn-secondary" data-dismiss="modal">
                             <img class="img-fluid mx-auto d-block" src="icon/croixBleue.svg" style="width: 10%; height: auto;">
                         </button>
-    </section>
-
-    </section>
-
-
-
-    <!-- EVENT *************************** -->
-
-    <section id="event">
-        <div class="container-fluid">
-            <div class="row">
-                <button class="col-6 offset-3 btn btn-modal" data-toggle="modal" data-target="#eventModal">
-                    <img class="img-fluid mx-auto d-block burger t-25" src="icon/eventsBlue.svg">
-                </button>
-            </div>
-        </div>
-
-        <div id="eventModal" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-            <!-- dialog -->
-            <div class="modal-dialog">
-
-                <!-- content -->
-                <div class="modal-content">
-
-                    <!-- header -->
-                    <div class="modal-header">
-                        <h1 id="myModalLabel" class="modal-title">EVENTS</h1>
                     </div>
-                    <!-- header -->
-
-                    <!-- body -->
-                    <div class="modal-body">
-                        <h2>MONDAY</h2>
-                        <h3>Monday Club Like our Facebook page Get Happy Hours all night!</h3>
-                        <h2>TUESDAY</h2>
-                        <h3>Live sport all day On our HD screens</h3>
-                        <h2>WEDNESDAY</h2>
-                        <h3>Happy Hours On many beers and spirits</h3>
-                        <h2>THURSDAY</h2>
-                        <h3>Happy Burgers! Burgers for 8€ from 19h to 21h</h3>
-                        <h2>FRIDAY</h2>
-                        <h3>Friday Nigth Cocktails Come and try out best cocktails from 6€</h3>
-                        <h2>SATURDAY</h2>
-                        <h3>Ladies night Wine & Tapas boards for 20€</h3>
-                        <h2>SUNDAY</h2>
-                        <h3>The Market Pub Quizz at 20h30 with quizz master Andrew</h3>
-
-                    </div>
-                    <!-- body -->
-
-                    <!-- footer -->
-                    <div class="modal-footer">
-                        <button class="btn " data-dismiss="modal">
-                            <img class="img-fluid mx-auto d-block center-block" src="icon/croixBleue.svg" style="width: 10%; height: auto;">
-                        </button>
-                    </div>
-                </div>
-            </div>
     </section>
+</div>
+
+
+
+
+<!-- ************************************************* -->
 
 
 
     <!-- Compte à rebourd -->
     <section id="countdown">
         <div class="container-fluid">
-            <div class="row">
-                <img class="btn mx-auto " src="icon/timerBlue.svg">
+            <div class="row chrono">
+                <img class="col-6 offset-3 btn img-fluid" src="icon/timerBlue.svg">
             </div>
-            <div class="mx-auto d-block">
-                <h1 id="demo"></h1>
-                <script>
-                    // Date et heure d'échéanceh du compte à rebourd !
-                    var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
-                    // Update the count down every 1 second
-                    var x = setInterval(function () {
-                        // Cherche la date et heure actuelle
-                        var now = new Date().getTime();
-                        // Calcul la difference entre la date de fin et la date actuelle
-                        var distance = countDownDate - now;
-                        // Time calculations for days, hours, minutes and seconds
-                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                        // Affiche le résultat de la difference dans l'ID DEMO
-                        document.getElementById("demo").innerHTML = hours + "h "
-                            + minutes + "m " + seconds + "s ";
-                        // Si le compte à rebourd est terminé, affiche un message
-                        if (distance < 0) {
-                            clearInterval(x);
-                            document.getElementById("demo").innerHTML = "C'est Partit !";
-                        }
-                    }, 1000);
-                </script>
-                <h1>FIFA </br>WORLD CUP</h1>
+            <div class="row decompte">
+                <div class="col-10 offset-1">
+                    <h1 id="demo"></h1>
+                    <script>
+                        // Date et heure d'échéanceh du compte à rebourd !
+                        var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+                        // Update the count down every 1 second
+                        var x = setInterval(function () {
+                            // Cherche la date et heure actuelle
+                            var now = new Date().getTime();
+                            // Calcul la difference entre la date de fin et la date actuelle
+                            var distance = countDownDate - now;
+                            // Time calculations for days, hours, minutes and seconds
+                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                            // Affiche le résultat de la difference dans l'ID DEMO
+                            document.getElementById("demo").innerHTML = hours + "h "
+                                + minutes + "m " + seconds + "s ";
+                            // Si le compte à rebourd est terminé, affiche un message
+                            if (distance < 0) {
+                                clearInterval(x);
+                                document.getElementById("demo").innerHTML = "C'est Partit !";
+                            }
+                        }, 1000);
+                    </script>
+                    <h1>FIFA </br>WORLD CUP</h1>
+                </div>
             </div>
         </div>
     </section>
     <!-- About Us ************************** -->
-
+    <!--
     <section id="aboutUs">
-        <h2>ABOUT US</h2>
-        <p>Opened in the start of 2015, The Market Tavern Bordeaux GastroPub is on the forefront of modern pub food and tasty
-            craft beers on tap. Inspired by the modern gastro-pubs of London, TMT is a small family oriented establishment
-            in the heart of Bordeaux’s chic and historic Chartrons district.
-            <br> Welcoming you with open arms seven days a week from 11am until 2am, this family owned pub has 40 seats inside
-            and 40 seats on a terrace with table service all day. During lunchtimes you can enjoy the “Formule du Midi” that
-            includes a selection of different starters, main courses and desserts that changes every day using fresh produce,
-            and a set evening Menu with our pub classics such as Beer Battered Fish and Chips and a homemade Tavern Pie.
-        </p>
-    </section>
+    </section> -->
 
 
     <!-- FORMULAIRE -->
     <section id="contactUs">
-        <div class="sectionform">
-            <div class="container">
+            <div class="container-fluid">
+                <div class="row">
 
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-offset-6 quickform">
-                    <h4>Send us a message to book a table.</h4>
+                    <div class="col-10 offset-1 quickform">
+                        <h4 class="">Send us a message to book a table.</h4>
 
-                    <form action="" method="get">
-                        <input class="infoform" name="" type="text" placeholder="Name">
-                        <input class="infoform" name="" type="text" placeholder="Email">
-                        <input class="infoform" name="" type="text" placeholder="Phone">
-                        <textarea class="infoform" name="" cols="" rows="" placeholder="Your message"></textarea>
-                        <button>Submit</button>
-                    </form>
+                        <form  action="" method="get">
+                            <input class="infoform" name="" type="text" placeholder="Name">
+                            <input class="infoform" name="" type="text" placeholder="Email">
+                            <input class="infoform" name="" type="text" placeholder="Phone">
+                            <textarea class="infoform" name="" cols="" rows="" placeholder="Your message"></textarea>
+                            <button>Submit</button>
+                        </form>
 
-
+                    </div>
                 </div>
 
             </div>
-
-        </div>
     </section>
     <!-- Default form contact -->
 
@@ -590,51 +587,53 @@
 
 
 
-    <footer class="page-footer font-small blue pt-4 mt-4">
+        <footer>
 
 
-        <!--Footer Links-->
-        <div class="container-fluid text-center text-md-left">
-            <div class="row">
+            <!--Footer Links-->
+            <div class="container-fluid">
+                <div class="row">
 
-                <!--First column-->
-                <div class="col-md-6">
-                    <h4 class="text-uppercase">CONTACT</h4>
-                    <h5>themarkettavern@gmail.com
-                        <br/>05 56 44 09 56</h5>
-                    <br/>
-                    <h4 class="text-uppercase">ADRESS</h4>
-                    <h5>The Market Tavern
-                        <br/>15 rue Rode 33000 Bordeaux</h5>
-                    <br/>
+                    <!--First column-->
+                    <div class="col-6">
+                        <h4 class="text-uppercase">CONTACT</h4>
+                        <h5>themarkettavern@gmail.com
+                            <br/>05 56 44 09 56</h5>
+                        <br/>
+                        <h4 class="text-uppercase">ADRESS</h4>
+                        <h5>The Market Tavern
+                            <br/>15 rue Rode 33000 Bordeaux</h5>
+                        <br/>
+                    </div>
+                    <!--/.First column-->
+
+                    <!--Second column-->
+                    <div class="col-6">
+                        <h4 class="text-uppercase">OPENING HOURS</h4>
+                        <h5>Mon to Fri : 12:00 – 00:00
+                            <br/>Weekends : 12:00 – 02:00</h5>
+                        <br/>
+                        <h4 class="text-uppercase">KITCHEN HOURS</h4>
+                        <h5>Mon to Fri : 12:00 – 14:30, 19:00 – 22:00
+                            <br/>Weekends : 12:30 – 15:00, 19h00 -22:00</h5>
+                        <br/>
+                    </div>
+                    <!--/.Second column-->
                 </div>
-                <!--/.First column-->
 
-                <!--Second column-->
-                <div class="col-md-6">
-                    <h4 class="text-uppercase">OPENING HOURS</h4>
-                    <h5>Mon to Fri : 12:00 – 00:00
-                        <br/>Weekends : 12:00 – 02:00</h5>
-                    <br/>
-                    <h4 class="text-uppercase">KITCHEN HOURS</h4>
-                    <h5>Mon to Fri : 12:00 – 14:30, 19:00 – 22:00
-                        <br/>Weekends : 12:30 – 15:00, 19h00 -22:00</h5>
-                    <br/>
+            <!--/.Footer Links-->
+
+            <!--Copyright-->
+                <div class="row">
+                    <div class="col-12 mb-0 text-center">
+                        <h4> © LES 4 ELEMENTS </h4>
+                    </div>
                 </div>
-                <!--/.Second column-->
             </div>
-        </div>
+            <!--/.Copyright-->
 
-        <!--/.Footer Links-->
-
-        <!--Copyright-->
-        <div class="footer-copyright py-3 text-center">
-            <h4> COPYRIGHT LES 4 ELEMENTS </h4>
-        </div>
-        <!--/.Copyright-->
-
-    </footer>
-
+        </footer>
+   
     <!--/.Footer-->
 
     <!-- ********************************** -->
