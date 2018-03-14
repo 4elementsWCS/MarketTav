@@ -156,7 +156,7 @@ body {
   border: 0;
   text-align: center;
   width: 100vw;
-  
+
 }
 .nav-pills li {
     margin-left: 5px; //use whatever you want
@@ -169,7 +169,7 @@ body {
   font-size: 2em;
   color: #fff;
   line-height: 30px;
- 
+
 }
 .logo {
     height:30vh;
@@ -558,4 +558,29 @@ Toggler1 & Toggler2 are in a row container (bootstrap).
 .quickform textarea:focus {
   border:3.5px dotted #263e7d;
   outline: 0;
+}
+
+
+
+/* ----------- ABOUT US ---------*/
+
+
+/* Section background */
+#aboutUs
+{
+  background:#263e7d;
+  height:auto;
+  width: 100vw;
+}
+
+
+/* Contenair in about us section  */
+
+.aboutUsTavern
+{
+  border: 3.5px solid #fbebd5;
+  background:#263e7d;
+  color:#fbebd5;
+
+
 }
