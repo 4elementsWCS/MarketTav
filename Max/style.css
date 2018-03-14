@@ -18,13 +18,25 @@ body {
 }
 
         /* BOITE D'OUTILS *****************/ 
-
+/*
 section, footer {
   border:red solid 1px;
 }
 
+nav {
+  border: 1px blue solid;
+}
+
 .col-6 {
   border: green solid 1px;
+}
+
+.logo {
+  border: 1px pink solid;
+}
+
+#home {
+  border: orange solid 1px;
 }
 
 .col-12 {
@@ -51,11 +63,7 @@ section, footer {
     border:1px red solid;
 }
 
-.closebtn1 {
-    border: 1px blue solid;
-}
-
-.closebtn2 {
+.closebtn1, .closebtn2, .closebtn3 {
     border: 1px blue solid;
 }
 
@@ -66,12 +74,12 @@ section, footer {
 #contactUs .row {
   border: 1px purple solid;
 }
-
+*/
         /* TAILLE DE CHAQUE PAGE ********** (W100VW H100VH)*/
 
-section, .eatSport, .drinkEvent, footer {
-  width: 100vw;
-  height: 100vh;
+section, footer {
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 body, html {
@@ -86,6 +94,7 @@ body, html {
 
 nav {
   position: relative;
+  max-width: 100vw;
 }
 
 .menuToggler1 {/* Position of the togglers in their own containers (menuToggler)*/
@@ -209,7 +218,15 @@ nav {
     left: 0;
     padding: 5vw 10vw;
 }
+/*
+.closebtn3 {
+    position: absolute;
+    bottom: -90vh;
+    left: 1vw;
+    padding: 45vh 48vw;
 
+}
+*/
 .phoneIcon {
     cursor:pointer;
 }
@@ -228,6 +245,11 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+#home {
+  display: flex;
+  justify-content: center;
+}
 
         /* EAT ****************************/
 
@@ -255,19 +277,6 @@ nav {
 		background-size: cover;
 }
 
-        /* DRINK *************************/
-
-#drink {
-	background-image: url("images/drink.jpg");
-
-	height: 100%;
-
-		/* Center and scale the image nicely */
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-}
-
         /* EVENT ***************************/
 
 #event {
@@ -279,6 +288,19 @@ nav {
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+}
+
+        /* DRINK *************************/
+
+#drink {
+  background-image: url("images/drink.jpg");
+
+  height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
         /* MENUS / SPORT / EVENTS / DRINK MENUS (MODALS) */
@@ -321,45 +343,19 @@ nav {
   padding: 10px;
   background: #fbebd5;
   border: 0;
-<<<<<<< HEAD
-  align-content: center;
-  width: 100vw;
-  
-=======
   text-align: center;
-<<<<<<< HEAD
-=======
-  width: 100vw;
-
->>>>>>> fc222f4aec7e94c3a783268a10aa793f074ad99d
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f
 }
 .nav-pills li {
-    margin-left: 15px; 
-align-content: center;
+    margin-left: 5px; //use whatever you want
 }
-.modal-header a {
-    text-align: center;
-}
-<<<<<<< HEAD
-=======
 /* .modal-header a {
   border: slateblue 3px solid;
 } */
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f
 .modal-title {
   font-weight: 300;
   font-size: 2em;
   color: #fff;
   line-height: 30px;
-<<<<<<< HEAD
- 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> fc222f4aec7e94c3a783268a10aa793f074ad99d
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f
 }
 .logo {
     height:30vh;
@@ -381,9 +377,7 @@ align-content: center;
 .modal-body h2{
     text-align: center;
 }
-button {
-  margin: auto;
-}
+
 .modal-footer {
   position: absolute;
   right: 0;
@@ -426,14 +420,8 @@ margin-right:auto;
 
 /* Attributs bouton fermeture */
 .btn {
-<<<<<<< HEAD
-	border: none;
-    color:  #263e7d;
-
-=======
   border: none;
   color:  #263e7d;
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f
 }
 
 .nav-pills a {
@@ -568,10 +556,7 @@ margin-right:auto;
   border:0.3vw dotted #263e7d;
   outline: 0;
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
         /* FOOTER */
 
 footer {
@@ -596,6 +581,11 @@ footer h5{
 
 
 @media (min-width: 992px){
+
+  section {
+    min-width: 50vw;
+    min-height: 100vh;
+  }
   .eatSport, .drinkEvent{
     display: flex;
     justify-content: center;
@@ -618,31 +608,10 @@ footer h5{
   footer .col-6 {
     padding-top: 2vh;
   }
-}
-=======
-
-
-/* ----------- ABOUT US ---------*/
-
-
-/* Section background */
-#aboutUs
-{
-  background:#263e7d;
-  height:auto;
-  width: 100vw;
-}
-
-
-/* Contenair in about us section  */
-
-.aboutUsTavern
-{
-  border: 3.5px solid #fbebd5;
-  background:#263e7d;
-  color:#fbebd5;
-
+/*
+  .closebtn3 {
+    display: 
+  }
+*/
 
 }
->>>>>>> fc222f4aec7e94c3a783268a10aa793f074ad99d
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f

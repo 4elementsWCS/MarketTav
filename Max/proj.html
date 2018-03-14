@@ -7,7 +7,7 @@
     <title>The Market Tavern</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="styledev.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
@@ -36,14 +36,14 @@
                     <div id="myNav" class="overlay">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
                             <img class="img-fluid mx-auto d-block croixNav t-25" src="icon/croix.svg"/> </a>
-                            <div class="overlay-content">
-                                <a href="#eat" onclick="closeNav()">EAT</a>
-                                <a href="#sport" onclick="closeNav()">SPORT</a>
-                                <a href="#drink" onclick="closeNav()">DRINK</a>
-                                <a href="#event" onclick="closeNav()">EVENT</a>
-                                <a href="#aboutUs" onclick="closeNav()">ABOUT US</a>
-                                <a href="#contactUs" onclick="closeNav()">CONTACT US</a>
-                            </div>
+                        <div class="overlay-content">
+                            <a href="#eat" onclick="closeNav()">EAT</a>
+                            <a href="#sport" onclick="closeNav()">SPORT</a>
+                            <a href="#drink" onclick="closeNav()">DRINK</a>
+                            <a href="#event" onclick="closeNav()">EVENT</a>
+                            <a href="#aboutUs" onclick="closeNav()">ABOUT US</a>
+                            <a href="#contactUs" onclick="closeNav()">CONTACT US</a>
+                        </div>
                     </div>
 
                     <!-- TOGGLER : width and height both set at 10vw in the attributes of the SVG-->
@@ -64,9 +64,11 @@
                     <div id="phoneNumber" class="overlay1">
                         <a href="javascript:void(0)" class="closebtn1" onclick="hideNumber()"></a>
                         <a href="javascript:void(0)" class="closebtn2" onclick="hideNumber()"></a>
+                        <a href="javascript:void(0)" class="closebtn3" onclick="hideNumber()"></a>
                         <div class="overlay1-content">
                             <a href="tel:+33556440958" onclick="hideNumber()">05 56 44 09 58</a>
                         </div>
+
                     </div>
 
                     <!-- TOGGLER : width and height both set at 10vw in the attributes of the SVG-->
@@ -83,7 +85,11 @@
     <!-- Welcome Page *********************************  -->
 
     <section id="home">
-        <img class="img-fluid mx-auto d-block logo " src="icon/logo.png">
+        <div class="container-fluid">
+            <div class="row">
+                <img class="logo" src="icon/logo.png">
+            </div>
+        </div>
     </section>
 
 
@@ -119,7 +125,7 @@
                     <!-- header -->
                     <div class="modal-header">
 
-                        <ul class="nav nav-pills text-fluid mx-auto">
+                        <ul class="nav nav-pills">
                             <li role="presentation">
                                 <a href="#starters">BEFORE</a>
                             </li>
@@ -134,7 +140,7 @@
                     <!-- header -->
 
                     <!-- body -->
-                    <div class="modal-body text-center">
+                    <div class="modal-body">
 
                         <h2 id="starters">STARTERS</h2>
                         <p>
@@ -352,9 +358,11 @@
                             <img class="img-fluid mx-auto d-block" src="icon/croixBleue.svg" style="width: 10%; height: auto;">
                         </button>
                     </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    </section>
 
 </div>
 
@@ -415,6 +423,10 @@
                         <button class="btn" data-dismiss="modal">
                             <img class="img-fluid mx-auto d-block" src="icon/croixBleue.svg" style="width: 10%; height: auto;">
                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
      <!-- DRINK ********************************* -->
@@ -438,21 +450,7 @@
 
                     <!-- header -->
                     <div class="modal-header">
-<<<<<<< HEAD
-                        <ul class="nav nav-pills text-fluid mx-auto">
-                            <li role="presentation">
-                                <a href="#cocktails">COCKTAIL</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#beers">BEERS</a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#spirits">SPIRIT</a>
-                            </li>
-                        </ul>
-=======
                         <h1 id="myModalLabel" class="modal-title">DRINKS</h1>
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f
                     </div>
                     <!-- header -->
 
@@ -519,6 +517,9 @@
                             <img class="img-fluid mx-auto d-block" src="icon/croixBleue.svg" style="width: 10%; height: auto;">
                         </button>
                     </div>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 
@@ -532,13 +533,8 @@
     <!-- Compte à rebourd -->
     <section id="countdown">
         <div class="container-fluid">
-<<<<<<< HEAD
-            <div class="row">
-                <img class="btn mx-auto" src="icon/timerBlue.svg">
-=======
             <div class="row chrono">
                 <img class="col-6 offset-3 btn img-fluid" src="icon/timerBlue.svg">
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f
             </div>
             <div class="row decompte">
                 <div class="col-10 offset-1">
@@ -558,12 +554,12 @@
                             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
                             // Affiche le résultat de la difference dans l'ID DEMO
-                            document.getElementById("demo").innerHTML = hours + "h "
-                                + minutes + "m " + seconds + "s ";
+                            document.getElementById("demo").innerHTML = hours + " : "
+                                + minutes + " : " + seconds;
                             // Si le compte à rebourd est terminé, affiche un message
                             if (distance < 0) {
                                 clearInterval(x);
-                                document.getElementById("demo").innerHTML = "C'est Partit !";
+                                document.getElementById("demo").innerHTML = "C'est Parti !";
                             }
                         }, 1000);
                     </script>
@@ -575,45 +571,7 @@
     <!-- About Us ************************** -->
     <!--
     <section id="aboutUs">
-<<<<<<< HEAD
-        <h2>ABOUT US</h2>
-        <p>Opened in the start of 2015, The Market Tavern Bordeaux GastroPub is on the forefront of modern pub food and tasty
-            craft beers on tap. Inspired by the modern gastro-pubs of London, TMT is a small family oriented establishment
-            in the heart of Bordeaux’s chic and historic Chartrons district.
-            <br> Welcoming you with open arms seven days a week from 11am until 2am, this family owned pub has 40 seats inside
-            and 40 seats on a terrace with table service all day. During lunchtimes you can enjoy the “Formule du Midi” that
-            includes a selection of different starters, main courses and desserts that changes every day using fresh produce,
-            and a set evening Menu with our pub classics such as Beer Battered Fish and Chips and a homemade Tavern Pie.
-        </p>
-=======
-<<<<<<< HEAD
     </section> -->
-=======
->>>>>>> fc222f4aec7e94c3a783268a10aa793f074ad99d
-
-          <div class-"container-fluid">
-                <div class="row">
-                  <div class="aboutUsTavern">
-                      <div class="col-6 offset-3">
-
-                            <h4 >About us</h4>
-                            <br>
-                            <p>Opened in the start of 2015, The Market Tavern Bordeaux GastroPub is on the forefront of modern pub food and tasty craft beers on tap. Inspired by the modern gastro-pubs of London, TMT is a small family oriented establishment in the heart of Bordeaux’s chic and historic Chartrons district.</p>
-                            <br>
-                            <p>Welcoming you with open arms seven days a week from 11am until 2am, this family owned pub has 40 seats inside and 40 seats on a terrace with table service all day. During lunchtimes you can enjoy the “Formule du Midi” that includes a selection of different starters, main courses and desserts that changes every day using fresh produce, and a set evening Menu with our pub classics such as Beer Battered Fish and Chips and a homemade Tavern Pie.</p>
-                            <br>
-                            <p>What better to accompany your meal than a fresh, tasty beer? One of the first pubs in Bordeaux to collaborate with British brewery Greene King, The Market Tavern has 10 different beers on tap ranging from British Ales to Craft Lager and IPAs.</p>
-                            <br>
-                            <p>The Market Tavern Bordeaux GastroPub has an international and bilingual staff (The Marketeers) that are always ready and willing to help with any questions customers may have about the beers, the food or the city of Bordeaux.</p>
-                      </div>
-                </div>
-
-
-
-          </div>
-
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f
-    </section>
 
 
     <!-- FORMULAIRE -->
