@@ -1,35 +1,35 @@
     /* HOME PAGE ******************************/
     /* FONTS (SIZE, TYPE, COLOR, ...) ***/
-    
+
     @font-face {
         font-family: 'menu';
         src: url(police/glou/GLECB.TTF);
     }
-    
+
     @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400);
     .font-roboto {
         font-family: 'menu';
     }
-    
+
     body {
         .font-roboto();
     }
     /* BOITE D'OUTILS *****************/
-    
+
     section,
     footer {
         border: red solid 1px;
     }
-    
+
     .col-6 {
         border: green solid 1px;
     }
-    
+
     .col-12 {
         border: orange solid 1px;
     }
     /* TAILLE DE CHAQUE PAGE ********** (W100VW H100VH)*/
-    
+
     section,
     .eatSport,
     .drinkEvent,
@@ -37,38 +37,38 @@
         width: 100vw;
         height: 100vh;
     }
-    
+
     body,
     html {
         height: 100%;
         /* HomePage occupe 100% de son container W100VW H100VH*/
     }
-    
+
     * {
         box-sizing: border-box;
     }
     /* NAVBAR *************************/
-    
+
     nav {
         position: relative;
     }
-    
+
     .menuToggler1 {
         /* Position of the togglers in their own containers (menuToggler)*/
         display: flex;
         justify-content: flex-start;
     }
-    
+
     .menuToggler2 {
         display: flex;
         justify-content: flex-end;
     }
-    
+
     .menuToggler1,
     .menuToggler2 {
         padding-top: 1vh;
     }
-    
+
     .overlay {
         /* overlay stands for the background of the items of the Main Menu*/
         height: 100vh;
@@ -81,7 +81,7 @@
         background-color: rgba(38, 62, 125, 1);
         border: 1px green solid;
     }
-    
+
     .overlay-content {
         /* overlay-content stands for the content of the Main Menu*/
         padding-top: 15vh;
@@ -90,7 +90,7 @@
         /* each container containing the text is full width */
         text-align: center;
     }
-    
+
     .overlay a {
         /* Now we set the text itself (eat, sport, ...) */
         padding: 2vh;
@@ -101,13 +101,13 @@
         transition: 0.3s;
         border: 1px red solid;
     }
-    
+
     .overlay a:hover,
     .overlay a:focus {
         /* We set here the color of the links when hovered and when clicked */
         color: #f1f1f1;
     }
-    
+
     .overlay .closebtn {
         /* We position at the top right of the screen the cross to quit the Main Menu*/
         position: absolute;
@@ -118,26 +118,26 @@
         height: 15vh;
         border: yellow 1px solid;
     }
-    
+
     .mainMenuIcon {
         /* cursor pointer is a property that permit to get a hand instead of the classic mouse when the span targeted is hoveres */
         cursor: pointer;
     }
     /* Phone Number Same reasoning than for the Main Menu ******************** */
     /* *closebtn1/closebtn2* We create 2 buttons to hide the phone number: first one at the top left, second one at the top right */
-    
+
     .menuC {
         height: 7vh;
     }
-    
+
     .phoneC {
         height: 7vh;
     }
-    
+
     .croixNav {
         height: 7vh;
     }
-    
+
     .overlay1 {
         height: 15vw;
         width: 100vw;
@@ -148,23 +148,23 @@
         left: 0;
         border: 1px green solid;
     }
-    
+
     #phoneNumber a {
         color: #fbebd5;
     }
-    
+
     .overlay1-content {
         width: 100vw;
         text-align: center;
         display: flex;
         justify-content: center;
     }
-    
+
     .overlay1-content a {
         width: 60vw;
         border: 1px red solid;
     }
-    
+
     .overlay1 a {
         font-size: 8vw;
         color: #263e7d;
@@ -172,12 +172,12 @@
         transition: 0.3s;
         height: 15vw;
     }
-    
+
     .overlay1 a:hover,
     .overlay1 a:focus {
         color: #f1f1f1;
     }
-    
+
     .closebtn1 {
         position: absolute;
         top: 0;
@@ -185,7 +185,7 @@
         border: 1px blue solid;
         padding: 5vw 10vw;
     }
-    
+
     .closebtn2 {
         position: absolute;
         top: 0;
@@ -193,12 +193,12 @@
         border: 1px blue solid;
         padding: 5vw 10vw;
     }
-    
+
     .phoneIcon {
         cursor: pointer;
     }
     /* HOMEPAGE **********************/
-    
+
     #home {
         /* The image used */
         background-image: url("images/home.jpg");
@@ -210,7 +210,7 @@
         background-size: cover;
     }
     /* EAT ****************************/
-    
+
     #eat {
         background-image: url("images/eat.jpg");
         height: 100%;
@@ -220,7 +220,7 @@
         background-size: cover;
     }
     /* SPORT **************************/
-    
+
     #sport {
         background-image: url("images/sport.jpg");
         height: 100%;
@@ -230,7 +230,7 @@
         background-size: cover;
     }
     /* DRINK *************************/
-    
+
     #drink {
         background-image: url("images/drink.jpg");
         height: 100%;
@@ -240,7 +240,7 @@
         background-size: cover;
     }
     /* EVENT ***************************/
-    
+
     #event {
         background-image: url("images/events.jpg");
         height: 100%;
@@ -251,7 +251,7 @@
     }
     /* MENUS / SPORT / EVENTS / DRINK MENUS (MODALS) */
     /* Alignement Modal */
-    
+
     .modal {
         position: fixed;
         top: 0;
@@ -260,7 +260,7 @@
         left: 0;
         overflow: hidden;
     }
-    
+
     .modal-dialog {
         position: fixed;
         margin: 0;
@@ -268,7 +268,7 @@
         height: 100vh;
         padding: 0;
     }
-    
+
     .modal-content {
         position: absolute;
         top: 0;
@@ -279,7 +279,7 @@
         border-radius: 0;
         box-shadow: none;
     }
-    
+
     .modal-header {
         position: absolute;
         top: 0;
@@ -292,28 +292,29 @@
         align-content: center;
         width: 100vw;
     }
-    
+
     .nav-pills li {
         margin-left: 15px;
         align-content: center;
     }
-    
+
     .modal-header a {
         text-align: center;
     }
-    
+
     .modal-title {
         font-weight: 300;
         font-size: 2em;
         color: #fff;
         line-height: 30px;
     }
-    
+
     .logo {
         height: 30vh;
         margin-top: 10vh;
     }
-    
+
+
     .modal-body {
         position: absolute;
         top: 50px;
@@ -323,24 +324,24 @@
         overflow: auto;
         background: #263e7d;
     }
-    
+
     .modal-body p {
         border: cornsilk solid 5px;
         text-align: center;
     }
-    
+
     .modal-body h2 {
         text-align: center;
     }
-    
+
     .btn {
         padding: 0;
     }
-    
+
     button {
         margin: auto;
     }
-    
+
     .modal-footer {
         position: absolute;
         right: 0;
@@ -352,196 +353,267 @@
         width: 100vw;
         align-content: center;
     }
-    
+
     .titrePage {
         text-align: center;
         color: #263e7d;
         font-size: 10vh;
     }
-    
+
     .infoPage {
         text-align: center;
         color: #263e7d;
     }
-    
+
     .cadrePage {
         margin-left: auto;
         margin-right: auto;
         border: #263e7d solid 10px;
     }
-    
+
      ::-webkit-scrollbar {
         -webkit-appearance: none;
         width: 10px;
         background: #f1f3f5;
         border-left: 1px solid darken(#f1f3f5, 10%);
     }
-    
+
      ::-webkit-scrollbar-thumb {
         background: darken(#f1f3f5, 20%);
     }
     /* Attributs bouton fermeture */
-    
+
     .btn {
         border: none;
         color: #263e7d;
     }
-    
+
     .nav-pills a {
         background-color: #fbebd5;
         color: #263e7d;
     }
+
     /* COUTDOWN ***********************/
-    
+
+
     #countdown {
         background-color: #fbebd5;
     }
-    
-    .chrono,
-    .decompte {
-        border: pink 1px solid;
+
+    .chrono {
+        padding-top: 20vh;
     }
-    
+
     #countdown h1 {
         color: #263e7d;
         text-align: center;
     }
-    
+
     .chrono,
     .decompte {
-        height: 50vh;
-    }
-    
-    .decompte h1 {
+        height: 40vh;
         padding-top: 10vh;
     }
-    
+
+    #demo {
+      border: 3.5px solid #263e7d;
+      border-radius: 5px;
+
+    }
+
+    }
+    .decompte h1 {
+        padding-top: 10vh;
+
+    }
+
     .btn {
         background: transparent;
+
     }
+
     /* ABOUT US */
-    /* Section background */
-    
+
+
     #aboutUs {
         background: #263e7d;
         height: auto;
         width: 100vw;
     }
+
+
+    #aboutUs .col-10 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+
+    #aboutUs .row {
+            height: 100vh;
+    }
+
     /* Contenair in about us section  */
-    
-    .aboutUsTavern {
+
+    .aboutus {
         border: 3.5px solid #fbebd5;
+        border-radius: 5px;
         background: #263e7d;
         color: #fbebd5;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
     }
+
+    .aboutUsTavern {
+        background: #263e7d;
+        color: #fbebd5;
+
+    }
+
+    .aboutUsText {
+        background: #263e7d;
+        color: #fbebd5;
+      }
+
+
     /* FORMULAIRES */
-    
+
     #contactUs .col-10 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin: auto;
     }
-    
+
     #contactUs .row {
-        border: 1px purple solid;
         height: 100vh;
     }
     /* Global form contenair  */
-    
+
     #contactUs {
         background-color: #fbebd5;
     }
-    
+
     .quickform {
         text-align: left;
     }
     /* Formulaire background color */
-    
+
     .sectionform {
         background: #fbebd5;
     }
     /* Part of "send us a message" */
-    
+
     .quickform h4 {
         text-transform: uppercase;
         color: #263e7d;
         margin-bottom: 2vw;
     }
     /* Color for name, email, phone and message */
-    
+
     .infoform::placeholder {
         color: #263e7d;
     }
     /* Contenair for name, email and phone (ONLY)) */
-    
+
     .quickform input,
     .quickform textarea {
         width: 100%;
         height: auto;
-        border: 0.3vw solid #263e7d;
+        border: 3.5px solid #263e7d;
+        border-radius: 5px;
         padding: 1vw 0.5vw;
         background: none;
         margin-bottom: 2vw;
     }
     /* Contenair for "Your message" */
-    
+
     .quickform textarea {
         height: 30vh;
         resize: none;
     }
     /* Button Submit */
-    
+
     .quickform button {
         background: #fbebd5;
         color: #333;
         padding: 0.8vw 1vw;
-        border: 0.3vw solid #263e7d;
+        border: 3.5px solid #263e7d;
+        border-radius: 5px;
         background: none;
         font-size: 12px 5px;
         text-transform: uppercase;
         color: #263e7d;
     }
     /* Button Submit when you touch it. */
-    
+
     .quickform button:hover {
+        border: dotted #263e7d;
         background: #263e7d;
+        border-radius: 5px;
         color: #fbebd5;
     }
     /* When you click on form part */
-    
+
     .quickform input[type="text"]:focus {
-        border: 0.3vw dotted #263e7d;
+        border: dotted #263e7d;
+        border-radius: 5px;
         outline: 0;
     }
-    
+
     .quickform textarea[type="text"]:focus {
-        border: 0.3vw dotted #263e7d;
+        border: dotted #263e7d;
+        border-radius: 5px;
         outline: 0
     }
-    
+
     .quickform textarea:focus {
-        border: 0.3vw dotted #263e7d;
+        border: dotted #263e7d;
+        border-radius: 5px;
         outline: 0;
     }
+
     /* FOOTER */
-    
+
     footer {
+
+        padding-top: 5vh;
         background: #263e7d;
         color: #fbebd5;
+        height:100vh;
     }
-    
+
     footer h4 {
         font-size: 1em;
     }
-    
+
     footer h5 {
-        font-size: 0.8em;
+        font-size: 0.6em;
     }
+
+    .social
+    {
+
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        background: #263e7d;
+    }
+
+  /* COPYRIGHT */
+
+  .copyright
+  {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background: #263e7d;
+      }
+
+
     /************************************************************/
     /* Media queries min-width 992px Desktop******************* */
     /************************************************************/
-    
+
     @media (min-width: 992px) {
         .eatSport,
         .drinkEvent {
@@ -567,7 +639,7 @@
         }
     }
     /*--------CADRE-------(EAT,SPORT,DRINK,EVENT)---*/
-    
+
     .cadre {
         display: flex;
         flex-direction: column;
@@ -575,37 +647,37 @@
         border: 3.5px solid #fbebd5;
         border-radius: 5px;
     }
-    
+
     .cadre h3 {
         font-size: 1em;
         text-align: center;
         font-family: "fag";
     }
-    
+
     .cadre h2 {
         font-family: "mona";
         font-size: 3rem;
         margin-top: 3vw;
         ;
     }
-    
+
     #event .cadre,
     #eat .cadre {
         border: 3.5px solid #263e7d;
     }
-    
+
     #event .cadre h2,
     #event .cadre h3,
     #eat .cadre h2,
     #eat .cadre h3 {
         color: #263e7d;
     }
-    
+
     #drink .cadre,
     #sport .cadre {
         border: 3.5px solid #fbebd5;
     }
-    
+
     #drink .cadre h2,
     #drink .cadre h3,
     #sport .cadre h2,
@@ -613,7 +685,7 @@
         color: #fbebd5;
     }
     /*---------CARTE-EAT----------*/
-    
+
     #starters,
     #mains,
     #sweet,
@@ -622,14 +694,14 @@
         color: #fbebd5;
         padding-bottom: 3vw;
     }
-    
+
     .modal-body h3 {
         font-family: "flag";
         text-align: center;
         font-size: 1rem;
         color: #fbebd5;
     }
-    
+
     .starters,
     .mains,
     .sweet {
