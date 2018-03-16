@@ -53,156 +53,113 @@
     * {
         box-sizing: border-box;
     }
-    /* NAVBAR *************************/
+           /* NAVBAR *************************/
 
-    nav {
-        position: relative;
-    }
+.midnightHeader.default .mainBurger svg {
+  fill: #263e7d;
+}
 
-    .menuToggler1 {
-        /* Position of the togglers in their own containers (menuToggler)*/
-        display: flex;
-        justify-content: flex-start;
-    }
+.midnightHeader.creme .mainBurger svg {
+  fill: #fbebd5;
+}
 
-    .menuToggler2 {
-        display: flex;
-        justify-content: flex-end;
-    }
+.midnightHeader.default .phone svg{
+  fill: #fbebd5;
+}
 
-    .menuToggler1,
-    .menuToggler2 {
-        padding-top: 1vh;
-    }
+.midnightHeader.blue .phone svg {
+  fill: #263e7d;
+}
 
-    .overlay {
-        /* overlay stands for the background of the items of the Main Menu*/
-        height: 100vh;
-        width: 100vw;
-        display: none;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: rgba(38, 62, 125, 1);
-        border: 1px green solid;
-    }
+/*
+.midnightHeader.default span svg {
+  fill: #263e7d;
+}
 
-    .overlay-content {
-        /* overlay-content stands for the content of the Main Menu*/
-        padding-top: 15vh;
-        /* starts at 15vh from the top */
-        width: 100vw;
-        /* each container containing the text is full width */
-        text-align: center;
-    }
+.midnightHeader.creme span svg {
+  fill: #fbebd5;
+}
+*/
+nav {
+  width: 100vw;
+  min-height: 10vh;
+}
 
-    .overlay a {
-        /* Now we set the text itself (eat, sport, ...) */
-        padding: 2vh;
-        text-decoration: none;
-        font-size: 5vh;
-        color: #fbebd5;
-        display: block;
-        transition: 0.3s;
-        border: 1px red solid;
-    }
+.menuToggler1 {/* Position of the togglers in their own containers (menuToggler)*/
+    display: flex;
+    justify-content: flex-start;
+}
 
-    .overlay a:hover,
-    .overlay a:focus {
-        /* We set here the color of the links when hovered and when clicked */
-        color: #f1f1f1;
-    }
+.menuToggler2 {
+    display: flex;
+    justify-content: flex-end;
+}
 
-    .overlay .closebtn {
-        /* We position at the top right of the screen the cross to quit the Main Menu*/
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 15vh;
-        /* we use *vh as unit like for the height of the "overlay & overlay a" to be sure it won't overflow. RESPONSIVE ;) */
-        height: 15vh;
-        border: yellow 1px solid;
-    }
+.menuToggler1, .menuToggler2 {
+    padding-top: 1vh;
+}
 
-    .mainMenuIcon {
-        /* cursor pointer is a property that permit to get a hand instead of the classic mouse when the span targeted is hoveres */
-        cursor: pointer;
-    }
-    /* Phone Number Same reasoning than for the Main Menu ******************** */
-    /* *closebtn1/closebtn2* We create 2 buttons to hide the phone number: first one at the top left, second one at the top right */
+.overlay {/* overlay stands for the background of the items of the Main Menu*/
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(38,62,125,1);
+}
 
-    .menuC {
-        height: 7vh;
-    }
+.overlay-content {/* overlay-content stands for the content of the Main Menu*/
+    padding-top: 15vh; /* starts at 15vh from the top */
+    width: 100vw;       /* each container containing the text is full width */
+    text-align: center;
+}
 
-    .phoneC {
-        height: 7vh;
-    }
+.overlay a {/* Now we set the text itself (eat, sport, ...) */
+    padding: 2vh;
+    text-decoration: none;
+    font-family: 'fag';
+    font-size: 2rem;
+    color: #fbebd5;
+    display: block;
+    transition: 0.3s;
+}
 
-    .croixNav {
-        height: 7vh;
-    }
+.overlay a:hover, .overlay a:focus {/* We set here the color of the links when hovered and when clicked */
+    color: #f1f1f1;
+}
 
-    .overlay1 {
-        height: 15vw;
-        width: 100vw;
-        display: none;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        border: 1px green solid;
-    }
+.overlay .closebtn {/* We position at the top right of the screen the cross to quit the Main Menu*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15vh; /* we use *vh as unit like for the height of the "overlay & overlay a" to be sure it won't overflow. RESPONSIVE ;) */
+    height: 15vh;
+}
 
-    #phoneNumber a {
-        color: #fbebd5;
-    }
+.mainMenuIcon {/* cursor pointer is a property that permit to get a hand instead of the classic mouse when the span targeted is hoveres */
+    cursor:pointer;
+}
 
-    .overlay1-content {
-        width: 100vw;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
+/* Phone Number Same reasoning than for the Main Menu ******************** */
+/* *closebtn1/closebtn2* We create 2 buttons to hide the phone number: first one at the top left, second one at the top right */
 
-    .overlay1-content a {
-        width: 60vw;
-        border: 1px red solid;
-    }
+#phoneNumber {
+  display: none;
+}
 
-    .overlay1 a {
-        font-size: 8vw;
-        color: #263e7d;
-        display: block;
-        transition: 0.3s;
-        height: 15vw;
-    }
+.croixNav {
+    height: 7vh;
+}
 
-    .overlay1 a:hover,
-    .overlay1 a:focus {
-        color: #f1f1f1;
-    }
+.phoneIcon {
+  margin-right: -30px;
+}
 
-    .closebtn1 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        border: 1px blue solid;
-        padding: 5vw 10vw;
-    }
-
-    .closebtn2 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        border: 1px blue solid;
-        padding: 5vw 10vw;
-    }
-
-    .phoneIcon {
-        cursor: pointer;
-    }
+.phoneIconWide {
+  display: none;
+}
     /* HOMEPAGE **********************/
 
     #home {
@@ -444,7 +401,7 @@
 
     }
 
-    /* ABOUT US */
+   /* ABOUT US */
 
 
     #aboutUs {
@@ -476,7 +433,8 @@
         color: #fbebd5;
         padding-top: 3vh;
         padding-bottom: 3vh;
-        font-family:"fag";
+
+        font-family:"flag";
         font-size: 1rem;
 
     }
@@ -484,8 +442,8 @@
     .aboutUsTavern {
         background: #263e7d;
         color: #fbebd5;
-        font-family:"flag";
-        font-size: 3rem;
+        font-family:"menu";
+        font-size: 2rem;
         text-align: center;
         padding-bottom: 3vh;
 
@@ -494,9 +452,9 @@
     .aboutUsText {
         background: #263e7d;
         color: #fbebd5;
-        font-family:"fag";
+        font-family:"flag";
+        font-size: 1rem;
       }
-
 
     /* FORMULAIRES */
 
@@ -849,7 +807,11 @@ font-family:"fag";
 text-decoration: none;
 }
 
-/*---------MEDIA----------*/
+/************************************************************/
+/* Media queries min-width 992px Desktop******************* */
+/************************************************************/
+
+
 
 @media (min-width: 992px){
 
@@ -859,10 +821,139 @@ text-decoration: none;
   }
   .eatSport, .drinkEvent{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 
     height: 100vh;
   }
+
+  .phoneIcon {
+    display: none;
+  }
+
+  #phoneNumber {
+    min-height: 20vh;
+  }
+
+  #phoneNumber a {
+    color: #fbebd5;
+    font-family: "fag";
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+
+  #phoneNumber a:hover, #phoneNumber a:focus {
+    color: #263e7d;
+    text-decoration: none;
+}
+
+  #phoneNumber p {
+    text-align: right;
+  }
+
+  .overlay1-content {
+    width: 25vw;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    margin-right: -100px;
+  }
+
+  .overlay1-content .close {
+    width: 10vw; 
+    height: 10vh;
+  }
+
+  .overlay1-content .open {
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .overlay1-content .open p {
+    background-color: rgba(38,62,125, 0.2);
+  }
+
+  .phoneIconWide {
+    display: block;
+    margin-right: -30px;
+    cursor: pointer;
+  }
+
+  .overlay {
+    height: auto;
+    background-color: rgba(0,0,0,0);
+    width: 70vw;
+  }
+
+  .overlay a {
+    color: #fbebd5;
+    display: flex;
+  }
+
+  .overlay-content{
+    width: 100%;
+    display: flex;
+    padding-top: 0;
+  }
+
+  .overlay-content p {
+    text-decoration: none;
+    font-family: "fag";
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: rgba(38,62,125, 0.2);
+  }
+
+  .overlay-content a {
+    width: 8.5vw;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .myNavContent {
+    display: flex;
+    margin-top: 0;
+  }
+
+  .overlay .closebtn {
+    position: initial;
+    height: 100%;
+    min-width: 5vw;
+  }
+
+  .overlay .closebtn img {
+    visibility: hidden;
+  }
+
+  .overlay a:hover, .overlay a:focus {
+    color: #263e7d;
+}
+
+.modal-header .nav-pills {
+  display: none;
+}
+
+.eatMenu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.starters, .mainsAndBurger, .sweet {
+  width: 30vw;
+}
+
+.burg {
+  width: 30
+}
+
+  
+
 
   #drink {
     order: 1;
@@ -879,3 +970,10 @@ text-decoration: none;
   footer .col-6 {
     padding-top: 2vh;
   }
+/*
+  .closebtn3 {
+    display: 
+  }
+*/
+
+}
