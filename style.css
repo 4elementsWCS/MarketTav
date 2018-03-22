@@ -7,6 +7,16 @@
     src: url(police/glou/GLECB.TTF);
 }
 
+@font-face{
+    font-family: 'fag';
+    src: url(police/fag/FGT___CB.ttf);
+}
+
+@font-face{
+    font-family: 'mona';
+    src: url(police/mona/MonaLisaSolidITC-Normal.ttf);
+}
+
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400);
 
 .font-roboto {
@@ -18,13 +28,57 @@ body {
 }
 
         /* BOITE D'OUTILS *****************/ 
-
+/*
 section, footer {
   border:red solid 1px;
 }
 
+nav {
+  border: 1px blue dotted;
+}
+
+nav .row {
+  border: 1px brown dotted;
+}
+
+nav .container-fluid {
+  border: yellow dotted 1px;
+}
+
+nav svg {
+  border: purple dotted 1px;
+}
+
+nav span {
+  border: grey solid 1px;
+}
+
 .col-6 {
   border: green solid 1px;
+}
+
+.operationnelle {
+  border: red solid 1px;
+}
+
+.operationnelle .col-6 {
+  border: green dotted 1px;
+}
+
+.operationnelle svg {
+  border:red solid 1px;
+}
+
+.operationnelle .container-fluid {
+  border: 1px yellow solid;
+}
+
+.logo {
+  border: 1px pink solid;
+}
+
+#home {
+  border: orange solid 1px;
 }
 
 .col-12 {
@@ -33,6 +87,10 @@ section, footer {
 
 .overlay {
     border:1px green solid;
+}
+
+.myNavContent {
+  border: 1px purple solid;
 }
 
 .overlay a {
@@ -47,16 +105,16 @@ section, footer {
     border:1px green solid;
 }
 
+.overlay1-content {
+  border: yellow 1px solid;
+}
+
 .overlay1-content a {
     border:1px red solid;
 }
 
-.closebtn1 {
-    border: 1px blue solid;
-}
-
-.closebtn2 {
-    border: 1px blue solid;
+.closebtn1, .closebtn2, .closebtn3 {
+    border: 3px blue solid;
 }
 
 .chrono, .decompte {
@@ -67,10 +125,22 @@ section, footer {
   border: 1px purple solid;
 }
 
+.eatSport, .drinkEvent {
+  border: 1px blue solid;
+}
+
+footer {
+  border: 1px yellow solid;
+}
+*/
         /* TAILLE DE CHAQUE PAGE ********** (W100VW H100VH)*/
 
-section, .eatSport, .drinkEvent, footer {
-  width: 100vw;
+section {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+footer {
   height: 100vh;
 }
 
@@ -84,8 +154,42 @@ body, html {
 
         /* NAVBAR *************************/
 
+.midnightHeader.default .mainBurger svg {
+  fill: #fbebd5;
+}
+
+.midnightHeader.default .phone svg {
+  fill: #fbebd5;
+}
+
+.midnightHeader.blueB .mainBurger svg {
+  fill: #263e7d;
+}
+
+.midnightHeader.cremeB .mainBurger svg {
+  fill: #fbebd5;
+}
+
+.midnightHeader.cremeP .phone svg{
+  fill: #fbebd5;
+}
+
+.midnightHeader.blueP .phone svg {
+  fill: #263e7d;
+}
+
+/*
+.midnightHeader.default span svg {
+  fill: #263e7d;
+}
+
+.midnightHeader.creme span svg {
+  fill: #fbebd5;
+}
+*/
 nav {
-  position: relative;
+  width: 100vw;
+  min-height: 10vh;
 }
 
 .menuToggler1 {/* Position of the togglers in their own containers (menuToggler)*/
@@ -122,7 +226,8 @@ nav {
 .overlay a {/* Now we set the text itself (eat, sport, ...) */
     padding: 2vh;
     text-decoration: none;
-    font-size: 5vh;
+    font-family: 'fag';
+    font-size: 2rem;
     color: #fbebd5;
     display: block;
     transition: 0.3s;
@@ -147,71 +252,29 @@ nav {
 /* Phone Number Same reasoning than for the Main Menu ******************** */
 /* *closebtn1/closebtn2* We create 2 buttons to hide the phone number: first one at the top left, second one at the top right */
 
-.menuC {
-    height: 7vh;
-}
-
-.phoneC {
-    height: 7vh;
+#phoneNumber {
+  display: none;
 }
 
 .croixNav {
     height: 7vh;
 }
 
-.overlay1 {
-    height: 15vw;
-    width: 100vw;
-    display: none;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-}
-
-#phoneNumber a {
-    color:#fbebd5;
-}
-
-.overlay1-content {
-    width: 100vw;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
-.overlay1-content a {
-    width: 60vw;
-}
-
-.overlay1 a {
-    font-size: 8vw;
-    color: #263e7d;
-    display: block;
-    transition: 0.3s;
-    height: 15vw;
-}
-
-.overlay1 a:hover, .overlay1 a:focus {
-    color: #f1f1f1;
-}
-
-.closebtn1 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 5vw 10vw;
-}
-
-.closebtn2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 5vw 10vw;
-}
-
 .phoneIcon {
-    cursor:pointer;
+  margin-right: -30px;
+}
+
+.phoneIconWide {
+  display: none;
+}
+
+
+
+        /* MENU OPERATIONNEL */
+
+.operationnelle {
+  width: calc(100vw - 30px);
+  min-height: 10vh;
 }
 
         /* HOMEPAGE **********************/
@@ -229,61 +292,67 @@ nav {
     background-size: cover;
   }
 
+#home {
+  display: flex;
+  justify-content: center;
+}
+
         /* EAT ****************************/
 
 #eat {
-	background-image: url("images/eat.jpg");
+  background-image: url("images/eat.jpg");
 
-	height: 100%;
+  height: 100%;
 
-		/* Center and scale the image nicely */
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
         /* SPORT **************************/
 
 #sport {
-	background-image: url("images/sport.jpg");
+  background-image: url("images/sport.jpg");
 
-	height: 100%;
+  height: 100%;
 
-		/* Center and scale the image nicely */
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-}
-
-        /* DRINK *************************/
-
-#drink {
-	background-image: url("images/drink.jpg");
-
-	height: 100%;
-
-		/* Center and scale the image nicely */
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
         /* EVENT ***************************/
 
 #event {
-	background-image: url("images/events.jpg");
+  background-image: url("images/events.jpg");
 
-	height: 100%;
+  height: 100%;
 
-		/* Center and scale the image nicely */
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+        /* DRINK *************************/
+
+#drink {
+  background-image: url("images/drink.jpg");
+
+  height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
         /* MENUS / SPORT / EVENTS / DRINK MENUS (MODALS) */
 
 /* Alignement Modal */
+/*
 .modal {
   position: fixed;
   top: 0;
@@ -321,45 +390,20 @@ nav {
   padding: 10px;
   background: #fbebd5;
   border: 0;
-<<<<<<< HEAD
-  align-content: center;
-  width: 100vw;
-  
-=======
   text-align: center;
-<<<<<<< HEAD
-=======
-  width: 100vw;
-
->>>>>>> fc222f4aec7e94c3a783268a10aa793f074ad99d
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f
 }
 .nav-pills li {
-    margin-left: 15px; 
-align-content: center;
+    margin-left: 5px; //use whatever you want
 }
-.modal-header a {
-    text-align: center;
-}
-<<<<<<< HEAD
-=======
 /* .modal-header a {
   border: slateblue 3px solid;
 } */
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f
+/*
 .modal-title {
   font-weight: 300;
   font-size: 2em;
   color: #fff;
   line-height: 30px;
-<<<<<<< HEAD
- 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> fc222f4aec7e94c3a783268a10aa793f074ad99d
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f
 }
 .logo {
     height:30vh;
@@ -381,9 +425,7 @@ align-content: center;
 .modal-body h2{
     text-align: center;
 }
-button {
-  margin: auto;
-}
+
 .modal-footer {
   position: absolute;
   right: 0;
@@ -425,23 +467,389 @@ margin-right:auto;
 }
 
 /* Attributs bouton fermeture */
+/*
 .btn {
-<<<<<<< HEAD
-	border: none;
-    color:  #263e7d;
-
-=======
   border: none;
   color:  #263e7d;
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f
 }
 
 .nav-pills a {
   background-color:#fbebd5;
   color: #263e7d;
 }
+*/
+    /* MENUS / SPORT / EVENTS / DRINK MENUS (MODALS) */
+    /* Alignement Modal */
+
+    .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
+    .modal-dialog {
+        position: fixed;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+    }
+
+    .modal-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 2px solid #3c7dcf;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .modal-header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 50px;
+        padding: 10px;
+        background: #fbebd5;
+        border: 0;
+        align-content: center;
+        width: 100vw;
+    }
+
+    .nav-pills li {
+        margin-left: 15px;
+        align-content: center;
+    }
+
+    .modal-header a {
+        text-align: center;
+    }
+
+    .modal-title {
+        font-weight: 300;
+        font-size: 2em;
+        color: #fff;
+        line-height: 30px;
+    }
+
+    .logo {
+        height: 30vh;
+        margin-top: 10vh;
+    }
+
+
+    .modal-body {
+        position: absolute;
+        top: 50px;
+        bottom: 60px;
+        width: 100vw;
+        font-weight: 300;
+        overflow: auto;
+        background: #263e7d;
+    }
+
+    .modal-body p {
+        border: cornsilk solid 5px;
+        text-align: center;
+    }
+
+    .modal-body h2 {
+        text-align: center;
+    }
+
+    .btn {
+        padding: 0;
+    }
+
+    button {
+        margin: auto;
+    }
+
+    .modal-footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 60px;
+        padding: 0;
+        background: #fbebd5;
+        width: 100vw;
+        align-content: center;
+    }
+
+    .titrePage {
+        text-align: center;
+        color: #263e7d;
+        font-size: 10vh;
+    }
+
+    .infoPage {
+        text-align: center;
+        color: #263e7d;
+    }
+
+    .cadrePage {
+        margin-left: auto;
+        margin-right: auto;
+        border: #263e7d solid 10px;
+    }
+
+     ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 10px;
+        background: #f1f3f5;
+        border-left: 1px solid darken(#f1f3f5, 10%);
+    }
+
+     ::-webkit-scrollbar-thumb {
+        background: darken(#f1f3f5, 20%);
+    }
+    /* Attributs bouton fermeture */
+
+    .btn {
+        border: none;
+        color: #263e7d;
+    }
+
+    .nav-pills a {
+        background-color: #fbebd5;
+        color: #263e7d;
+    }
+
+    /*--------CADRE-------(EAT,SPORT,DRINK,EVENT)---*/
+
+.cadre {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  border:3.5px solid #fbebd5;
+  border-radius: 5px;
+ }
+.cadre h3 {
+  font-size: 1em;
+  text-align:center;
+  font-family:"fag";
+}
+.cadre h2 {
+  font-family:"mona";
+  font-size: 3rem;
+  margin-top: 3vw;;
+}
+#event .cadre, #eat .cadre {
+border:3.5px solid #263e7d;
+}
+#event .cadre h2, #event .cadre h3, #eat .cadre h2, #eat .cadre h3{
+color:#263e7d;
+}
+#drink .cadre, #sport .cadre {
+border:3.5px solid #fbebd5;
+}
+#drink .cadre h2, #drink .cadre h3, #sport .cadre h2, #sport .cadre h3{
+color:#fbebd5;
+ }
+
+ .burg2 {
+  display: none;
+ }
+
+/*---------CARTE-EAT----------*/
+
+
+ #starters, #mains, #sweet,#brunch {
+  font-family:"mona";
+  color:#fbebd5;
+  padding-bottom: 3vw;
+ }
+ .modal-body h3{
+  font-family:"flag";
+  text-align:center;
+  font-size: 1rem;
+  color:#fbebd5;
+}
+.starters, .mains, .sweet {
+  border:3.5px solid #fbebd5;
+  padding:3vw;
+  border-radius:5px;
+  margin:2vw;
+}
+#eat .modal-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  padding: 0;
+  background: #263E7D;
+  width: 100vw;
+  align-content: center;
+  border:none;
+}
+#eat .modal-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 51px;
+  padding: 10px;
+  background: #263E7D;
+  border: 0;
+  align-content: center;
+  width: 100vw;
+  border:none;
+}
+
+/*-------------CARTE-DRINKS----------*/
+
+#spirits, #cocktails, #bier {
+  font-family:"mona";
+  color:#263e7d;
+  padding-bottom: 3vw;
+
+}
+.spirits, .cocktails, .bier {
+  border:3.5px solid #263e7d;
+  padding:3vw;
+  border-radius:5px;
+  margin:2vw;
+}
+#drink .modal-body {
+  background: #fbebd5
+}
+#drink .modal-body h3{
+  color:#263e7d;
+  font-family:"flag";
+}
+.whiskey, .tequila, .gin, .rum, .vodka {
+  color:#263e7d;
+  font-size:1.5rem;
+  font-family:"flag";
+  padding-top: 2vw;
+}
+.whiskey h3, .tequila h3, .gin h3, .rum h3, .vodka h3{
+  color:#263e7d;
+}
+
+.bier2 {
+  display: none;
+}
+
+.spiritsSuite {
+  display: none;
+}
+
+/*----------CARTE-EVENTS----------*/
+
+.modal-body .agenda {
+  border:3.5px solid #fbebd5;
+  padding:3vw;
+  border-radius:5px;
+  margin:2vw;
+}
+.agenda h2 {
+  font-family:"mona";
+  color:#fbebd5;
+}
+#event .modal-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  padding: 0;
+  background: #263E7D;
+  width: 100vw;
+  align-content: center;
+  border:none;
+}
+#event .modal-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 51px;
+  padding: 10px;
+  background: #263E7D;
+  border: 0;
+  align-content: center;
+  width: 100vw;
+  border:none;
+}
+#event #myModalLabel {
+  background-color: #FBEBD5;
+  border-radius: 2px;
+  padding: 2px 10px;
+  color: #263E7D;
+  font-family:"fag";
+  text-decoration:none;
+  font-size:1rem;
+}
+
+/*---------CARTE-SPORTS---------*/
+
+
+.calendar {
+  border:3.5px solid #263e7d;
+  padding:3vw;
+  border-radius:5px;
+  margin:2vw;
+}
+#sport .modal-body {
+  background: #fbebd5;
+}
+.calendar h2 {
+  font-family:"mona";
+  color:#263e7d;
+  padding: 1vw 1vw;
+
+}
+.calendar h3 {
+  color:#263e7d;
+  font-family:"fag";
+}
+#sport #myModalLabel {
+  background-color: #263E7D;
+  border-radius: 2px;
+  padding: 2px 10px;
+  color: #fbebd5;
+  font-family:"fag";
+  text-decoration:none;
+  font-size:1rem;
+}
+
+
+/*--------NAV-PILLS-----(EAT,DRINKS)*/
+
+#eat .nav-pills a {
+background-color: #FBEBD5;
+border-radius: 2px;
+padding: 4px;
+color: #263E7D;
+font-family:"fag";
+text-decoration: none;
+}
+#drink .nav-pills a {
+background-color: #263E7D;
+border-radius: 2px;
+padding: 4px;
+color: #fbebd5;
+font-family:"fag";
+text-decoration: none;
+}
+
+
+
+
+
+
 
         /* COUTDOWN ***********************/
+/*
 
 #countdown {
   background-color: #fbebd5;
@@ -463,129 +871,261 @@ margin-right:auto;
 .btn {
   background: transparent;
 }
+*/
 
-        /* CONTACT US */
+#countdown {
+        background-color: #fbebd5;
+    }
 
-        /* FORMULAIRES */
+    .chrono {
+        padding-top: 20vh;
+    }
 
-#contactUs .col-10{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-}
+    #countdown h1 {
+        color: #263e7d;
+        text-align: center;
+        font-size: 8vh;
+        font-family:"menu";
 
-#contactUs .row {
-  height: 100vh;
-}
-
-
-/* Global form contenair  */
-
-#contactUs {
-  background-color: #fbebd5;
-}
-
-.quickform {
-  text-align: left;
-
-}
+    }
 
 
-/* Formulaire background color */
-
-.sectionform {
-  background:#fbebd5;
-}
 
 
-/* Part of "send us a message" */
+    .chrono,
+    .decompte {
+        height: 40vh;
+        padding-top: 10vh;
+    }
 
-.quickform h4 {
-  text-transform:uppercase;
-  color:#263e7d;
-  margin-bottom: 2vw;
-}
+    #demo {
+      border: 3.5px solid #263e7d;
+      border-radius: 5px;
 
+    }
 
-/* Color for name, email, phone and message */
+    }
+    .decompte h1 {
+        padding-top: 10vh;
 
-.infoform::placeholder {
-  color: #263e7d;
-}
+    }
 
-/* Contenair for name, email and phone (ONLY)) */
-.quickform input, .quickform textarea {
-  width: 100%;
-  height:auto;
-  border:0.3vw solid #263e7d;
-  padding:1vw 0.5vw;
-  background:none;
-  margin-bottom: 2vw;
+    .btn {
+        background: transparent;
 
-}
-
-/* Contenair for "Your message" */
-.quickform textarea {
-  height: 30vh;
-  resize:none;
-}
-
-/* Button Submit */
-.quickform button {
-  background:#fbebd5;
-  color:#333;
-  padding:0.8vw 1vw;
-  border:0.3vw solid #263e7d;
-  background:none;
-  font-size:12px 5px;
-  text-transform:uppercase;
-  color:#263e7d;
-}
+    }
 
 
-/* Button Submit when you touch it. */
-
-.quickform button:hover {
-  background:#263e7d;
-  color:#fbebd5;
-}
 
 
-/* When you click on form part */
 
-.quickform input[type="text"]:focus {
-  border:0.3vw dotted #263e7d;
-  outline: 0;
-}
 
-.quickform textarea[type="text"]:focus {
-  border:0.3vw dotted #263e7d;
-  outline: 0
-}
+/* ABOUT US */
 
-.quickform textarea:focus {
-  border:0.3vw dotted #263e7d;
-  outline: 0;
-}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-        /* FOOTER */
+    #aboutUs span {
+      display: none;
+    }
 
-footer {
-  background: #263e7d;
-  color: #fbebd5;
-}
+    #aboutUs {
+        background: #263e7d;
+        height: auto;
+        width: 100vw;
 
-footer h4{
-  font-size: 1em;
-}
+    }
 
-footer h5{
-  font-size: 0.8em;
-}
+
+    #aboutUs .col-10 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+
+    #aboutUs .row {
+            height: 100vh;
+    }
+
+    /* Contenair in about us section  */
+
+    .aboutus {
+        border: 3.5px solid #fbebd5;
+        border-radius: 5px;
+        background: #263e7d;
+        color: #fbebd5;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+
+        font-family:"flag";
+        font-size: 1rem;
+
+    }
+
+    .aboutUsTavern {
+        background: #263e7d;
+        color: #fbebd5;
+        font-family:"menu";
+        font-size: 2rem;
+        text-align: center;
+        padding-bottom: 3vh;
+
+    }
+
+    .aboutUsText {
+        background: #263e7d;
+        color: #fbebd5;
+        font-family:"flag";
+        font-size: 1rem;
+      }
+
+    /* FORMULAIRES */
+
+    #contactUs .col-10 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    #contactUs .row {
+        height: 100vh;
+    }
+    /* Global form contenair  */
+
+    #contactUs {
+        background-color: #fbebd5;
+    }
+
+    .quickform {
+        text-align: left;
+    }
+    /* Formulaire background color */
+
+    .sectionform {
+        background: #fbebd5;
+    }
+    /* Part of "send us a message" */
+
+    .quickform h4 {
+        text-transform: uppercase;
+        color: #263e7d;
+        margin-bottom: 2vw;
+        font-family:"menu";
+        font-size: 2rem;
+    }
+    /* Color for name, email, phone and message */
+
+    .infoform::placeholder {
+        color: #263e7d;
+    }
+    /* Contenair for name, email and phone (ONLY)) */
+
+    .quickform input,
+    .quickform textarea {
+        width: 100%;
+        height: auto;
+        border: 3.5px solid #263e7d;
+        border-radius: 5px;
+        padding: 1vw 0.5vw;
+        background: none;
+        margin-bottom: 2vw;
+        font-family:"flag";
+        font-size: 1rem;
+    }
+    /* Contenair for "Your message" */
+
+    .quickform textarea {
+        height: 50vh;
+        resize: none;
+    }
+    /* Button Submit */
+
+    .quickform button {
+        background: #fbebd5;
+        color: #333;
+        padding: 0.8vw 1vw;
+        border: 3.5px solid #263e7d;
+        border-radius: 5px;
+        background: none;
+        font-size: 12px 5px;
+        text-transform: uppercase;
+        color: #263e7d;
+        font-family:"menu";
+        font-size: 1rem;
+    }
+    /* Button Submit when you touch it. */
+
+    .quickform button:hover {
+        border: dotted #263e7d;
+        background: #263e7d;
+        border-radius: 5px;
+        color: #fbebd5;
+    }
+    /* When you click on form part */
+
+    .quickform input[type="text"]:focus {
+        border: dotted #263e7d;
+        border-radius: 5px;
+        outline: 0;
+    }
+
+    .quickform textarea[type="text"]:focus {
+        border: dotted #263e7d;
+        border-radius: 5px;
+        outline: 0
+    }
+
+    .quickform textarea:focus {
+        border: dotted #263e7d;
+        border-radius: 5px;
+        outline: 0;
+    }
+
+    /* FOOTER */
+
+    footer {
+
+        padding-top: 5vh;
+        background: #263e7d;
+        color: #fbebd5;
+        height:100vh;
+        font-family:"flag";
+        font-size: 1rem;
+    }
+
+    footer h4 {
+        font-family:"menu";
+        font-size: 2rem;
+    }
+
+    footer h5 {
+        font-size: 1rem;
+    }
+
+    .social
+    {
+        padding-bottom: 2vh;
+        background: #263e7d;
+    }
+
+    .social img {
+      width: 10%;
+    }
+
+  /* COPYRIGHT */
+
+  .copyright
+  {
+    background: #263e7d;
+  }
+  .copyright h4 {
+    font-size:1.5rem;
+    padding-top:2vw;
+  }
+
+
+
 
 
 
@@ -596,12 +1136,156 @@ footer h5{
 
 
 @media (min-width: 992px){
+
+  section {
+    min-width: 50vw;
+    min-height: 100vh;
+  }
   .eatSport, .drinkEvent{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 
     height: 100vh;
   }
+
+  .phoneIcon {
+    display: none;
+  }
+
+  #phoneNumber {
+    min-height: 20vh;
+  }
+
+  #phoneNumber a {
+    color: #fbebd5;
+    font-family: "fag";
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+
+  #phoneNumber a:hover, #phoneNumber a:focus {
+    color: #263e7d;
+    text-decoration: none;
+}
+
+  #phoneNumber p {
+    text-align: right;
+  }
+
+  .overlay1-content {
+    width: 25vw;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    margin-right: -100px;
+  }
+
+  .overlay1-content .close {
+    width: 10vw; 
+    height: 10vh;
+  }
+
+  .overlay1-content .open {
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .overlay1-content .open p {
+    background-color: rgba(38,62,125, 0.2);
+  }
+
+  .phoneIconWide {
+    display: block;
+    margin-right: -30px;
+    cursor: pointer;
+  }
+
+  .overlay {
+    height: auto;
+    background-color: rgba(0,0,0,0);
+    width: 70vw;
+  }
+
+  .overlay a {
+    color: #fbebd5;
+    display: flex;
+  }
+
+  .overlay-content{
+    width: 100%;
+    display: flex;
+    padding-top: 0;
+  }
+
+  .overlay-content p {
+    text-decoration: none;
+    font-family: "fag";
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: rgba(38,62,125, 0.2);
+  }
+
+  .overlay-content a {
+    width: 8.5vw;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .myNavContent {
+    display: flex;
+    margin-top: 0;
+  }
+
+  .overlay .closebtn {
+    position: initial;
+    height: 100%;
+    min-width: 5vw;
+  }
+
+  .overlay .closebtn img {
+    visibility: hidden;
+  }
+
+  .overlay a:hover, .overlay a:focus {
+    color: #263e7d;
+}
+
+.modal-header .nav-pills {
+  display: none;
+}
+
+.eatMenu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.starters, .mains, .sweet {
+  width: 30vw;
+}
+
+.burg {
+  display: none;
+}
+
+.burg2 {
+  display: block;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-top: 5vh;
+
+}
+
+  
+
 
   #drink {
     order: 1;
@@ -618,31 +1302,88 @@ footer h5{
   footer .col-6 {
     padding-top: 2vh;
   }
+
+  .decompte .col-12 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+
+  #demo {
+     width: 30vw;
+  }
+
+  #aboutUs span {
+    display: block;
+  }
+
+  .col-lg-6 img {
+    height: 100vh;
+  }
+
+  .aboutus {
+    border: none;
+  }
+
+  .aboutUsCrew {
+    border: 3.5px solid #fbebd5;
+    border-radius: 5px;
+    height:55vh;
+    width: 30vw;
+    padding: 3vh;
+  }
+
+ #contactUs textarea {
+  height: 20vh;
+ }
+
+ .social img {
+  width: 5%;
+ }
+
+ .eatMenu h2, #sportModal h2{
+  font-size: 1.5rem;
+ }
+
+ .hideMenu {
+  display: none;
+ }
+
+ #myModalLabel {
+  display: none;
+ }
+
+ .sportBlue {
+  width: 20vw;
+ }
+
+ #drink .modal-body h2 {
+  font-size: 1.5rem;
+ }
+
+ #drink .modal-body {
+  display: flex;
+  justify-content: space-around;
+ }
+
+.bier2 {
+  display: block;
 }
-=======
 
-
-/* ----------- ABOUT US ---------*/
-
-
-/* Section background */
-#aboutUs
-{
-  background:#263e7d;
-  height:auto;
-  width: 100vw;
+.cocktails, .spirits, .bier {
+  width: 30vw;
 }
 
+.spiritsSuite {
+  display: block;
+}
 
-/* Contenair in about us section  */
-
-.aboutUsTavern
-{
-  border: 3.5px solid #fbebd5;
-  background:#263e7d;
-  color:#fbebd5;
-
+/*
+  .closebtn3 {
+    display: 
+  }
+*/
 
 }
->>>>>>> fc222f4aec7e94c3a783268a10aa793f074ad99d
->>>>>>> 754a3654f5fe32e05c17d417588179469dd2961f
